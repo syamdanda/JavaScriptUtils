@@ -40,3 +40,35 @@ function getBusinessDatesCount(startDate, endDate) {
     }
     return count;
 }
+
+// Convert UTC timestamp to preferred date format.
+function UTCToDate(utcTime, dateFormat) {
+	var date = new Date(utcTime);
+	var year = date.getFullYear();
+    	var month = ('0' + (date.getMonth() + 1)).slice(-2);
+    	var day = date.getDate();
+	var formattedDate;
+	switch(dateFormat) {
+	    case 'MM-DD-YYYY':
+	        formattedDate = month + '-' + day + '-' + year;
+	        break;
+	    case 'DD-MM-YYYY':
+	        formattedDate = day + '-' + month + '-' + year;
+	        break;
+	    case 'YYYY-MM-DD':
+	        formattedDate = year + '-' + month + '-' + day;
+	        break;
+	    case 'MM/DD/YYYY':
+	        formattedDate = month + '/' + day + '/' + year;
+	        break;
+	    case 'DD/MM/YYYY':
+	        formattedDate = day + '/' + month + '/' + year;
+	        break;
+	    case 'YYYY/MM/DD':
+	        formattedDate = year + '/' + month + '/' + day;
+	        break;
+	    default:
+	        formattedDate = year + '-' + month + '-' + day;
+	}
+	return formattedDate;
+}
