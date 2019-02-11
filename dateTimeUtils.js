@@ -26,3 +26,17 @@ function getNextWorkingDay(date) {
 		}
 	}	
 }
+
+//Get business days count (do not add Saturday and Suday)
+function getBusinessDatesCount(startDate, endDate) {
+    var count = 0;
+    var currentDate = startDate
+    while (currentDate.getTime() <= endDate.getTime()) {
+        var dayOfWeek = currentDate.getDay();
+        if(!((dayOfWeek == 6) || (dayOfWeek == 0))) {
+           count++;
+        }
+        currentDate.setDate(currentDate.getDate() + 1);
+    }
+    return count;
+}
