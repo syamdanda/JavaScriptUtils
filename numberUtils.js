@@ -12,6 +12,8 @@ function isEven(num){
 
 // return true if the number is even
 function isPrime(num){
+  if (! num) {
+    return false;
   if(num==2) 
     return true;
   for(i=2;i<Math.sqrt(num);i++) {
