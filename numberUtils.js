@@ -1,5 +1,13 @@
 /* Utility functions related to numbers */
 
+function isInt(value) {
+  return !isNaN(value) && (function(x) { return (x | 0) === x; })(parseFloat(value))
+}
+
+function isNumeric(value) {
+  return !isNaN(parseFloat(value)) && isFinite(value);
+}
+
 //return true if the number is odd
 function isOdd(num) {
   return num % 2 != 0;
