@@ -91,3 +91,28 @@ function timeFormatToMinutes(time) {
 	}
 	return 0;
 }
+
+function getWeekDaysByWeekNum(weekNum, year) {
+	if (weekNum && year) {
+		var today = new Date(year, 0, 1 + ((weekNum - 1) * 7));
+		var currentWeekDates = [];
+
+		var mondayOfWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - today.getDay() + 1, 0, 0, 0).getTime();
+		var tuesdayOfWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - today.getDay() + 2, 0, 0, 0).getTime();
+		var wednesayOfWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - today.getDay() + 3, 0, 0, 0).getTime();
+		var thursdayOfWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - today.getDay() + 4, 0, 0, 0).getTime();
+		var fridayOfWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - today.getDay() + 5, 0, 0, 0).getTime();
+		var saturdayOfWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - today.getDay() + 6, 0, 0, 0).getTime();
+		var sundayOfWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - today.getDay() + 7, 0, 0, 0).getTime();
+		
+		currentWeekDates.push(mondayOfWeek);
+		currentWeekDates.push(tuesdayOfWeek);
+		currentWeekDates.push(wednesayOfWeek);
+		currentWeekDates.push(thursdayOfWeek);
+		currentWeekDates.push(fridayOfWeek);
+		currentWeekDates.push(saturdayOfWeek);
+		currentWeekDates.push(sundayOfWeek);
+		
+		return currentWeekDates;
+	}
+}
