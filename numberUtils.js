@@ -8,6 +8,18 @@ function isNumeric(value) {
   return !isNaN(parseFloat(value)) && isFinite(value);
 }
 
+function numericValidator(value) {
+	if (value) {
+		if (! /\D/.test(value)) {
+			return true;
+		} else {
+			return false;
+		}
+	} else {
+		return false;
+	}
+}
+
 //return true if the number is odd
 function isOdd(num) {
   return num % 2 != 0;
