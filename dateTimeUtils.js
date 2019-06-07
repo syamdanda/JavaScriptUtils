@@ -72,3 +72,22 @@ function UTCToDate(utcTime, dateFormat) {
 	}
 	return formattedDate;
 }
+
+function minutesToTimeFormat(minutes) {
+	if (minutes) {
+	    var mm = parseInt(minutes % 60);
+	    var hh = parseInt((minutes-mm)/60);
+	    return hh.toString() + ':' + (mm <10 ? '0' : '') + mm.toString();
+	} else {
+		return '00:00';
+	}
+}
+
+function timeFormatToMinutes(time) {
+	if (time) {
+		var timeArray = time.split(':');
+		hoursValue = parseInt(timeArray[0] * 60) + parseInt(timeArray[1]);
+		return hoursValue;
+	}
+	return 0;
+}
