@@ -42,3 +42,9 @@ function isPrime(num){
   }
   return true;
 }
+	
+	
+function getRandomNumber() {
+	//generates 8 digit random integer as string
+	return Math.floor((Math.random() * 100000000) + 9999999).toString();
+}
