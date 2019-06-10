@@ -141,6 +141,7 @@ function timeDifference(current, previous) {
     }
 }
 
+//is given string a valid date
 function isDate(txtDate) {
     var currVal = txtDate;
     if(currVal == '')
