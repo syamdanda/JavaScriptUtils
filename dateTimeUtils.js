@@ -117,6 +117,7 @@ function getWeekDaysByWeekNum(weekNum, year) {
 	}
 }
 
+//get the time difference between two timestamps as -- -- ago
 function timeDifference(current, previous) {    
     var msPerMinute = 60 * 1000;
     var msPerHour = msPerMinute * 60;
