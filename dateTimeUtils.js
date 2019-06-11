@@ -173,3 +173,7 @@ function isDate(txtDate) {
     }
     return true;
 }
+
+function addMinutes(timestamp, minutes) {
+    return new Date(timestamp + minutes*60000).getTime();
+}
