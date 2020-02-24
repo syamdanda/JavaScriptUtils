@@ -4,6 +4,10 @@ function isInt(value) {
   return !isNaN(value) && (function(x) { return (x | 0) === x; })(parseFloat(value))
 }
 
+function isFloat(n){
+    return Number(n) === n && n % 1 !== 0;
+}
+
 function isNumeric(value) {
   return !isNaN(parseFloat(value)) && isFinite(value);
 }
