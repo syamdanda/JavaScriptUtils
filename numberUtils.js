@@ -30,7 +30,7 @@ function isEven(num){
   return num % 2 == 0;
 }
 
-// return true if the number is even
+// return true if the number is prime
 function isPrime(num){
   if (! num) {
     return false;
