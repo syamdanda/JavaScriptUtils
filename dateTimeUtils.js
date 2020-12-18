@@ -178,11 +178,3 @@ function addMinutes(timestamp, minutes) {
     return new Date(timestamp + minutes*60000).getTime();
 }
 
-function formatText(text) {
-	var result = text;
-	for (var i = 1; i < arguments.length; i += 1) {
-		var re = new RegExp('\\{' + (i-1) + '\\}', 'g');
-		result = result.replace(re, arguments[i]);
-	}
-	return result;
-}
