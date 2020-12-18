@@ -1,6 +1,0 @@
-// null, undefined or empty string check
-function isValidString(inputString) {
-  if (inputString && inputString.length)
-    return true;
-   return false;
-}
