@@ -36,7 +36,7 @@ function isEven(num){
 
 // return true if the number is prime
 function isPrime(num){
-  if (! num) {
+  if (! num || ! isNumeric(num)) {
     return false;
   if(num==2) 
     return true;
